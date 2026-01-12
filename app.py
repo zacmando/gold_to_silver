@@ -258,12 +258,13 @@ with col1:
                 showgrid=True,
                 gridcolor=GRID_X,
                 griddash="dot",
+                fixedrange=True,
                 showspikes=True,
                 spikemode="across",
                 spikesnap="cursor",
                 spikethickness=1,
             )
-            fig.update_yaxes(showgrid=True, gridcolor=GRID_Y, griddash="dot")
+            fig.update_yaxes(showgrid=True, gridcolor=GRID_Y, griddash="dot", fixedrange=True)
             st.plotly_chart(fig, use_container_width=True, config=PLOTLY_CFG)
 
     with price_tabs[1]:
@@ -297,12 +298,13 @@ with col1:
                 showgrid=True,
                 gridcolor=GRID_X,
                 griddash="dot",
+                fixedrange=True,
                 showspikes=True,
                 spikemode="across",
                 spikesnap="cursor",
                 spikethickness=1,
             )
-            fig.update_yaxes(showgrid=True, gridcolor=GRID_Y, griddash="dot")
+            fig.update_yaxes(showgrid=True, gridcolor=GRID_Y, griddash="dot", fixedrange=True)
             st.plotly_chart(fig, use_container_width=True, config=PLOTLY_CFG)
 
 with col2:
@@ -337,12 +339,13 @@ with col2:
             showgrid=True,
             gridcolor=GRID_X,
             griddash="dot",
+            fixedrange=True,
             showspikes=True,
             spikemode="across",
             spikesnap="cursor",
             spikethickness=1,
         )
-        fig_ratio.update_yaxes(showgrid=True, gridcolor=GRID_Y, griddash="dot")
+        fig_ratio.update_yaxes(showgrid=True, gridcolor=GRID_Y, griddash="dot", fixedrange=True)
         st.plotly_chart(fig_ratio, use_container_width=True, config=PLOTLY_CFG)
 
 # --------------------- Stock in ounces ---------------------
@@ -415,12 +418,13 @@ if stock_symbol:
                 showgrid=True,
                 gridcolor=GRID_X,
                 griddash="dot",
+                fixedrange=True,
                 showspikes=True,
                 spikemode="across",
                 spikesnap="cursor",
                 spikethickness=1,
             )
-            fig_stock.update_yaxes(showgrid=True, gridcolor=GRID_Y, griddash="dot")
+            fig_stock.update_yaxes(showgrid=True, gridcolor=GRID_Y, griddash="dot", fixedrange=True)
             st.plotly_chart(fig_stock, use_container_width=True, config=PLOTLY_CFG)
 else:
     st.info("Enter a stock ticker to view it in ounces.")
